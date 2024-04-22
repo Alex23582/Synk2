@@ -1,0 +1,173 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 3 # Number of replicas (pods) to create
+  selector:
+    matchLabels:
+      app: frontend # Label to match with the pods
+  template:
+    metadata:
+      labels:
+        app: frontend # Label for the pods
+    spec:
+      containers:
+        - name: frontend-container
+          image: localhost:32000/frontend:latest # Container image
+          env:
+            - name: BACKEND_LOCAL_URL
+              value: http://synk-backend-loadbalancer:4008
+          ports:
+            - containerPort: 3000 # Port the container listens on
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-loadbalancer
+spec:
+  selector:
+    app: frontend # Label selector to target the pods
+  ports:
+    - protocol: TCP
+      port: 801 # Port exposed by the service within the cluster
+      targetPort: 3000 # Port the pods are listening on
+      nodePort: 30009
+  type: LoadBalancer # Expose the service externally using LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: synk-backend
+spec:
+  replicas: 3 # Number of replicas (pods) to create
+  selector:
+    matchLabels:
+      app: synk-backend # Label to match with the pods
+  template:
+    metadata:
+      labels:
+        app: synk-backend # Label for the pods
+    spec:
+      containers:
+        - name: synk-backend-container
+          image: localhost:32000/synk-backend # Container image
+          env:
+            - name: PUBLIC_BACKEND_URL
+              value: https://synced.teamspeak.bet/api
+            - name: PUBLIC_FRONTEND_URL
+              value: https://synced.teamspeak.bet
+            - name: PORT
+              value: "4008"
+            - name: AMQPURL
+              value: rabbitmq-service
+            - name: PROXY
+              value: "true"
+            - name: DATABASE_URL
+              value: db-service
+          ports:
+            - containerPort: 4008 # Port the container listens on
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: synk-backend-loadbalancer
+spec:
+  selector:
+    app: synk-backend # Label selector to target the pods
+  ports:
+    - protocol: TCP
+      port: 4008 # Port exposed by the service within the cluster
+      targetPort: 4008 # Port the pods are listening on
+      nodePort: 30010
+  type: LoadBalancer # Expose the service externally using LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq
+spec:
+  replicas: 1 # Number of replicas (pods) to create
+  selector:
+    matchLabels:
+      app: rabbitmq # Label to match with the pods
+  template:
+    metadata:
+      labels:
+        app: rabbitmq # Label for the pods
+    spec:
+      containers:
+        - name: rabbitmq-container
+          image: rabbitmq # Container image
+          ports:
+            - containerPort: 3000 # Port the container listens on
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-service
+spec:
+  selector:
+    app: rabbitmq
+  ports:
+    - protocol: TCP
+      port: 5672 # RabbitMQ port
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  replicas: 1 # Number of replicas (pods) to create
+  selector:
+    matchLabels:
+      app: postgres # Label to match with the pods
+  template:
+    metadata:
+      labels:
+        app: postgres # Label for the pods
+    spec:
+      containers:
+        - name: postgres-container
+          image: postgres # Container image
+          env:
+            - name: POSTGRES_USER
+              value: root
+            - name: POSTGRES_PASSWORD
+              value: root
+            - name: POSTGRES_DB
+              value: synk2
+          ports:
+            - containerPort: 5432 # Port the container listens on
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-service
+spec:
+  selector:
+    app: postgres
+  ports:
+    - protocol: TCP
+      port: 5432 # postgres port
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tsworker
+spec:
+  replicas: 1 # Number of replicas (pods) to create
+  selector:
+    matchLabels:
+      app: tsworker # Label to match with the pods
+  template:
+    metadata:
+      labels:
+        app: tsworker # Label for the pods
+    spec:
+      containers:
+        - name: tsworker-container
+          image: localhost:32000/tsworker # Container image
+          env:
+            - name: AMQPURL
+              value: rabbitmq-service
