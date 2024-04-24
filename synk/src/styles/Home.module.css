@@ -1,0 +1,32 @@
+.body{
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+.bigstarttext{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.smallstarttext{
+    color: #939397;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.firstrow{
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+.onlineusers{
+    flex-grow: 0.3;
+}
+
+.horizontalList{
+    margin-top: 2rem;
+}

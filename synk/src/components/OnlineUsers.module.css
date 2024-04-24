@@ -1,0 +1,45 @@
+.body{
+    background-color: #2D2E35;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    height: 28rem;
+}
+
+.title{
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.userlist{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    overflow-y: scroll;
+    height: calc(100% - 2.3rem);
+}
+
+.userbox{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.username{
+    color: white;
+}
+
+.userstatus{
+    color: #6C963D;
+}
+
+.image{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: red;
+    background-size: cover;
+}

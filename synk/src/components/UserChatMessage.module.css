@@ -1,0 +1,25 @@
+.body{
+    display: flex;
+    gap: 1rem;
+}
+
+.image{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+}
+
+.vertdiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.authorname{
+    color: #939397;
+}
+
+.message{
+    color: white;
+}

@@ -1,0 +1,88 @@
+.body{
+    background-color: rgba(0, 0, 0, 0.767);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-color: #2D2E35;
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.title{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.input{
+    width: 100%;
+    height: 40px;
+    background-color: #303435;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0 1rem;
+    color: white;
+}
+
+.checkboxcontainer{
+    width: 90%;
+    display: flex;
+    gap: 1rem;
+}
+
+.checkboxtext{
+    color: #838383;
+    font-weight: 600;
+}
+
+.button{
+    width: 100%;
+    height: 50px;
+    background-color: #27282F;
+}
+
+.iconbutton{
+    background-color: #000;
+    width: 100%;
+}
+
+.devidercontainer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.devidercontainer p{
+    color: white;
+}
+
+.deviderline{
+    height: 4px;
+    background-color: #202020;
+    width: 42%;
+    border-radius: 10px;
+}
+
+.errormessage{
+    font-weight: 500;
+    color: red;
+    text-align: center;
+}

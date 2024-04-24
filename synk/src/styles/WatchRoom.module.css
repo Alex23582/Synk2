@@ -1,0 +1,52 @@
+.title {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.body {
+    padding: 3rem 4rem;
+}
+
+.controlsectiondevider {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.urlinput {
+    background-color: #303435;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    width: 80%;
+}
+
+.controlsection {
+    width: 50%;
+}
+
+.updateurlcontainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.streamtapebutton{
+    margin-top: 1rem;
+}
+
+
+@media (max-width: 1200px) {
+    .controlsectiondevider {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .controlsection {
+        width: 100%;
+    }
+    .body {
+        padding: 1.5rem 2rem;
+    }
+}
+

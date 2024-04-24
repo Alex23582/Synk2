@@ -1,0 +1,43 @@
+.body{
+    background-color: rgba(0, 0, 0, 0.767);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-color: #2D2E35;
+    padding: 1.5rem 2rem;
+    border-radius: 1.5rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.title{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.accountbutton{
+    width: 100%;
+}
+
+.verificationcode{
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    font-weight: 700;
+    background-color: #27282c;
+    padding: 1rem 1rem 1rem 2rem;
+    text-align: center;
+}

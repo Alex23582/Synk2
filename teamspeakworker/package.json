@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.3.1",
+    "ts3-nodejs-library": "^3.5.0"
+  }
+}

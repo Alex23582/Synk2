@@ -1,0 +1,17 @@
+.profileoptionicon{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 14px;
+    background-color: #27282F;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.profileoptionicon:hover{
+    background-color: #515361;
+}

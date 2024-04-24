@@ -1,0 +1,28 @@
+.body{
+    background-color: #6C963D;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.body:hover{
+    background-color: #42572a;
+}
+
+.icon{
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 7%;
+}

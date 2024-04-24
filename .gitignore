@@ -1,0 +1,8 @@
+failed/
+synk/node_modules/
+synkserver/node_modules/
+teamspeakworker/node_modules/
+synk/.git_
+.vscode/
+synk/.env.local
+**/.env

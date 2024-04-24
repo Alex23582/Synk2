@@ -1,0 +1,72 @@
+{
+    "en": {
+        "nav": {
+            "home": "Home",
+            "friends": "Friends",
+            "publicrooms": "Public Rooms",
+            "news": "News",
+            "profile": "Profile",
+            "createroom": "Create room",
+            "login": "Log in",
+            "logout": "Log out",
+            "createaccount": "Create Account",
+            "newfriendrequests": "new friend requests"
+        },
+        "home": {
+            "searchhint": "Search for Rooms or Users",
+            "bigstarttext": "Watch videos together! Synced to sub-millisecond accuracy.",
+            "smallstarttext": "Connect with your friends. Join public rooms.",
+            "shoutbox": "Shoutbox",
+            "englishonly": "ENGLISH ONLY",
+            "onlineusers": "online users",
+            "logintochat": "Log in to chat"
+        },
+        "friends": {
+            "start": "Your Friends",
+            "requests": "Friendrequests",
+            "nofriendrequests": "You don't have any friend-requests right now"
+        },
+        "profile": {
+            "friendrequestsendbutnotaccepted": "Your friend request was not accepted yet",
+            "dragfile": "Choose a file or drag it here to change your profile picture (max. 20 MB)"
+        },
+        "general": {
+            "notloggedin": "You are not logged-in. Log in to see your friends"
+        }
+    },
+    "de": {
+        "nav": {
+            "home": "Start",
+            "friends": "Freunde",
+            "publicrooms": "Öffentliche Räume",
+            "news": "Neuigkeiten",
+            "profile": "Profil",
+            "createroom": "Raum erstellen",
+            "login": "Einloggen",
+            "logout": "Ausloggen",
+            "createaccount": "Account erstellen",
+            "newfriendrequests": "neue Freundschaftsanfragen"
+        },
+        "home": {
+            "searchhint": "Nach Räumen oder Benutzern suchen",
+            "bigstarttext": "Videos zusammen schauen. Auf die millisekunde genau synchronisiert.",
+            "smallstarttext": "Verbinde dich mit deinen Freunden. Tritt öffentlichen Räumen bei.",
+            "shoutbox": "Shoutbox",
+            "englishonly": "NUR AUF DEUTSCH",
+            "onlineusers": "Benutzer Online",
+            "logintochat": "Einloggen um chat zu benutzen"
+        },
+        "friends": {
+            "start": "Deine Freunde",
+            "requests": "Freundschaftanfragen",
+            "nofriendrequests": "Du hast keine Freundschaftsanfragen"
+        },
+        "profile": {
+            "friendrequestsendbutnotaccepted": "Deine Freundschaftsanfrage wurde noch nicht angenommen",
+            "dragfile": "Datei aussuchen oder in dieses Fenster ziehen um Profilbild zu ändern (max. 20 MB)"
+        },
+        "general": {
+            "notloggedin": "Du bist nicht eingeloggt. Logge dich ein um deine Freunde zu sehen."
+        }
+    }
+}

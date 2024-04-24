@@ -1,0 +1,56 @@
+.usercontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.userbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.userprofileimage {
+    background-color: red;
+    width: 65px;
+    height: 65px;
+    border-radius: 1.4rem;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.username {
+    color: #939397;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.morename {
+    color: #6C963D;
+    font-weight: 600;
+}
+
+.admintext {
+    color: #A53131;
+    font-weight: 600;
+}
+
+.moreusers {
+    background-color: #6C963D;
+    width: 65px;
+    height: 65px;
+    border-radius: 1.4rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.noevenspacing {
+    gap: 1.5rem;
+}
