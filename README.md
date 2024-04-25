@@ -12,3 +12,6 @@ The Backend is a nodejs-app using expressjs and socket.io. It's connecting to a 
 The teamspeakworker is optional. Synk allows logins with teamspeak³. It matches the IP of the user on the website with the IPs of users on a given teamspeak server. If there is a match, the teamspeakworker sends a message to the teamspeak user. The website displays a verification code on the website that the user has to send to the teamspeakworker client. If the code matches, the teamspeakworker automatically logs the user in.
 The teamspeakworker is not designed to be stateless and scalable, since multiple running instances of the teamspeakworker would use too much teamspeak-slots.
 ### Screenshots
+![Screenshot 1](https://raw.githubusercontent.com/Alex23582/Synk2/main/screenshots/screenshot1.PNG "Screenshot 1")
+![Screenshot 2](https://raw.githubusercontent.com/Alex23582/Synk2/main/screenshots/screenshot2.PNG "Screenshot 2")
+![Screenshot 3](https://raw.githubusercontent.com/Alex23582/Synk2/main/screenshots/screenshot3.PNG "Screenshot 3")
